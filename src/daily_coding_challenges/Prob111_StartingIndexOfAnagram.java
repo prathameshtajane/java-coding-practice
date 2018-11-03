@@ -55,7 +55,7 @@ public class Prob111_StartingIndexOfAnagram {
         List<Integer> output_list = new ArrayList<>();
 
         //edge conditions
-        if(text.length() == 0 || pattern.length() == 0){
+        if(text.length() == 0 || pattern.length() == 0 || pattern.length() > text.length()){
             return output_list;
         }
 
