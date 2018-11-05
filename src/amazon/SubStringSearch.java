@@ -24,8 +24,6 @@ import java.util.Set;
  */
 
 
-
-
 public class SubStringSearch {
 
     static boolean compareUniqueString(String inputStr,int startIndex,int endIndex ){
