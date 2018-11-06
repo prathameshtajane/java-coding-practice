@@ -27,7 +27,7 @@ public class FindExcelRowNumber {
         while (num >= 0){
             int char_ascii_value = (num % 26)+65;
             excel_row.append((char)char_ascii_value);
-            num = (num/26) -1;
+            num = (num/26)-1;
         }
 
         System.out.println("Excel Row Number :"+input_decimal_number);
@@ -37,5 +37,6 @@ public class FindExcelRowNumber {
     public static void main(String[] args) {
         System.out.println("Find Excel Row number given decimal number");
         findExcelRowNumber(701);
+        findExcelRowNumber(28);
     }
 }
