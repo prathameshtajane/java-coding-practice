@@ -52,6 +52,7 @@ public class Prob113_ReverseWordInString {
         step 2 - reverse the sentence create inn step 1
     */
     static String reverseWordsInStringInPlace(StringBuffer input_string){
+        //step 1
         int j = -1;
         for(int i = 0; i <input_string.length() ;i++ ){
          if(' ' == input_string.charAt(i)){
@@ -63,6 +64,7 @@ public class Prob113_ReverseWordInString {
              reverseString(input_string,j+1,i);
          }
         }
+        //step 2
         reverseString(input_string,0,input_string.length()-1);
         return input_string.toString();
 
