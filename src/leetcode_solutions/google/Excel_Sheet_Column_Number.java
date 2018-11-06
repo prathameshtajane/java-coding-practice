@@ -58,5 +58,7 @@ public class Excel_Sheet_Column_Number {
         System.out.println(ColNum.titleToNumber("A"));
         System.out.println(ColNum.titleToNumber("AB"));
         System.out.println(ColNum.titleToNumber("ZY"));
+        System.out.println(ColNum.titleToNumber("AAA"));
+        System.out.println(ColNum.titleToNumber("ZA"));
     }
 }

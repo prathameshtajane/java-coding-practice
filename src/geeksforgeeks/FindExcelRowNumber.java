@@ -38,5 +38,6 @@ public class FindExcelRowNumber {
         System.out.println("Find Excel Row number given decimal number");
         findExcelRowNumber(701);
         findExcelRowNumber(28);
+        findExcelRowNumber(28);
     }
 }
