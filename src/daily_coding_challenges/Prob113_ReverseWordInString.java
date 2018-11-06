@@ -18,6 +18,12 @@ package daily_coding_challenges;
     step 2 - reverse the list
     step 3 = join the list of string into single string with delimiter as " "
 
+    In-place
+    Time complexity - O(largest word length * n)
+    Space complexity - O(1)
+
+    step 1 - reverse each word of the string buffer
+    step 2 - reverse the whole string buffer generated after step 1
 
 */
 
@@ -27,10 +33,44 @@ import java.util.List;
 
 public class Prob113_ReverseWordInString {
 
-
+    static void  reverseString(StringBuffer input_string,int start_index,int end_index){
+        int temp_end_index = end_index;
+        for(int i = start_index ; i < (int) Math.ceil((start_index+end_index)/2.0) ; i++){
+            char temp_char = input_string.charAt(i);
+            input_string.setCharAt(i,input_string.charAt(temp_end_index));
+            input_string.setCharAt(temp_end_index,temp_char);
+            --temp_end_index;
+        }
+    }
 
     /*
+        In-place
+        Time complexity - O(largest word length * n)
+        Space complexity - O(1)
 
+        step 1 - reverse each word in sentence
+        step 2 - reverse the sentence create inn step 1
+    */
+    static String reverseWordsInStringInPlace(StringBuffer input_string){
+        int j = -1;
+        for(int i = 0; i <input_string.length() ;i++ ){
+         if(' ' == input_string.charAt(i)){
+             reverseString(input_string,j+1,i-1);
+             j=i;
+         }
+         //for last word
+         if(i == input_string.length()-1){
+             reverseString(input_string,j+1,i);
+         }
+        }
+        reverseString(input_string,0,input_string.length()-1);
+        return input_string.toString();
+
+    }
+
+    /*
+        Time complexity - O(n)
+        Space complexity - O(n)
      */
     static String reverseWordsInString(String input_string){
         List<String> input_string_list = Arrays.asList(input_string.split("\\s+"));
@@ -45,6 +85,7 @@ public class Prob113_ReverseWordInString {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseWordsInString("hello world here"));
+        StringBuffer input_buffer = new StringBuffer("hello world here");
+        System.out.println(reverseWordsInStringInPlace(input_buffer));
     }
 }
