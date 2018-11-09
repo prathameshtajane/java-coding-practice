@@ -93,7 +93,6 @@ public class M_Format_JSON_String {
             }else{
                 System.out.print(token);
             }
-
         }
     }
 
