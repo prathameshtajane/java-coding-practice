@@ -78,6 +78,8 @@ inc 2 2: Add k = 2 to bottom e = 2 elements of the stack, so S = [6, 8, 1]. The 
 push 4: Push 4 onto the top of the stack, so S = [6, 8, 1, 4]. We then print the top element, 4, on a new line.
 pop: Pop the top element from the stack, so S = [6, 8, 1]. We then print the top element, 1, on a new line.
 pop: Pop the top element from the stack, so S = [6, 8]. We then print the top element, 8, on a new line.
+
+todo : implement SuperStack
  */
 
 
