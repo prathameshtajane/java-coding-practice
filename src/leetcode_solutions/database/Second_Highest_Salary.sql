@@ -39,6 +39,16 @@ FROM Employee e
 ORDER BY e.Salary ASC
 LIMIT 1,1;
 
+Create table If Not Exists Employee (Id int, Salary int);
+Truncate table Employee;
+insert into Employee (Id, Salary) values ('1', '100');
+
+SELECT MAX(e.Salary) as SecondHighestSalary
+FROM Employee e
+WHERE e.salary < (SELECT MAX(e.Salary) FROM Employee e);
+
+
+
 
 
 
