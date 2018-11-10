@@ -35,6 +35,12 @@ FROM (SELECT p.Email,COUNT(p.id) as num FROM Person p GROUP BY p.Email) as TempT
 WHERE TempTable.num > 1;
 
 
+# using having 
+select Email
+from Person
+group by Email
+having count(*) > 1;
+
 #This is the one of the most efficient solution because of the Inner Join and On condition (I think)?
 SELECT DISTINCT t1.Email
 FROM Person t1
