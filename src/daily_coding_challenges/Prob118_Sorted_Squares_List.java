@@ -30,11 +30,44 @@ public class Prob118_Sorted_Squares_List {
         return input_list;
     }
 
+    //Linear approach
+    //Time complexity : O(n)
+    //Space complexity : O(n)
+    private static List<Integer> sortedSquresListLinear(List<Integer> input_list){
+        int p1 = 0;
+        int p2 = input_list.size()-1;
+        int op_list_index = input_list.size();
+        Integer[] op_arr = new Integer[op_list_index];
+        --op_list_index;
+
+        while(p2 >= p1){
+            if(Math.abs(input_list.get(p1)) >= Math.abs(input_list.get(p2))){
+                op_arr[op_list_index]=(int)Math.pow(input_list.get(p1),2);
+                p1++;
+            }else{
+                op_arr[op_list_index]=(int)Math.pow(input_list.get(p2),2);
+                p2--;
+            }
+            op_list_index--;
+        }
+
+        return Arrays.asList(op_arr);
+    }
+
+
+
     public static void main(String[] args) {
         System.out.println("Sorted Squares List");
         Integer[] input = {-9, -2, 0, 2, 3};
-        for(Integer each :sortedSquresList(Arrays.asList(input))){
+
+//        for(Integer each :sortedSquresList(Arrays.asList(input))){
+//            System.out.println(each);
+//        }
+
+        for(Integer each :sortedSquresListLinear(Arrays.asList(input))){
             System.out.println(each);
         }
+
+
     }
 }
