@@ -37,6 +37,6 @@ public class CreateBSTGivenUnsortedArray {
 
     public static void main(String[] args) {
         System.out.println("Create a Binary Search Tree given unsorted array");
-        createBinarySearchTree(new int[]{1,2,3,4,5,6,7,8});
+        createBinarySearchTree(new int[]{8,7,9,10,5,6,3});
     }
 }
