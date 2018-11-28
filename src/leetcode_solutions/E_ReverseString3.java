@@ -1,5 +1,8 @@
 package leetcode_solutions;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  *
  * 557. Reverse Words in a String III
@@ -20,6 +23,24 @@ package leetcode_solutions;
  *
  */
 public class E_ReverseString3 {
+
+    private static String reverseWordJava8(String str){
+        char[] reversed_string = str.toCharArray();
+        for(int i = 0;i < str.length()/2 ; i++){
+                char temp = reversed_string[i];
+                reversed_string[i] = reversed_string[str.length()-i-1];
+                reversed_string[str.length()-i-1] = temp;
+        }
+        return new String(reversed_string);
+    }
+
+
+    private static String reveserSentence(String str){
+        return Arrays.asList(str.split(" "))
+                .stream()
+                .map(x -> reverseWordJava8(x))
+                .collect(Collectors.joining(" "));
+    }
 
     private static void reverseWord(StringBuffer input_string,int start_index,int end_index){
         int temp_end_index = end_index;
@@ -48,8 +69,9 @@ public class E_ReverseString3 {
     }
 
     public static void main(String[] args) {
-        System.out.println("557. Reverse Words in a String III");
-        System.out.println(getReverseString("Let's take LeetCode contest"));
-        System.out.println(getReverseString("Let's"));
+//        System.out.println("557. Reverse Words in a String III");
+//        System.out.println(getReverseString("Let's take LeetCode contest"));
+//        System.out.println(getReverseString("Let's"));
+        System.out.println(reveserSentence("Let's take LeetCode contest"));
     }
 }
