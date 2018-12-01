@@ -21,7 +21,7 @@ package leetcode_solutions;
 
  Link : https://leetcode.com/problems/detect-capital/description/
  */
-public class Detect_Capital {
+public class E_Detect_Capital {
 
     static boolean detectCapitalUse(String word) {
         return word.matches("[A-Z][a-z]*|[A-Z]*|[a-z]*");
@@ -34,13 +34,13 @@ public class Detect_Capital {
     }
 
     public static void main(String args[]){
-        System.out.println("Detect_Capital");
-        System.out.println(Detect_Capital.detectCapitalUse("USA"));
-        System.out.println(Detect_Capital.detectCapitalUse("Flag"));
-        System.out.println(Detect_Capital.detectCapitalUse("FlaG"));
+        System.out.println("E_Detect_Capital");
+        System.out.println(E_Detect_Capital.detectCapitalUse("USA"));
+        System.out.println(E_Detect_Capital.detectCapitalUse("Flag"));
+        System.out.println(E_Detect_Capital.detectCapitalUse("FlaG"));
         System.out.println("------");
-        System.out.println(Detect_Capital.detectCapitalUse2("USA"));
-        System.out.println(Detect_Capital.detectCapitalUse2("Flag"));
-        System.out.println(Detect_Capital.detectCapitalUse2("FlaG"));
+        System.out.println(E_Detect_Capital.detectCapitalUse2("USA"));
+        System.out.println(E_Detect_Capital.detectCapitalUse2("Flag"));
+        System.out.println(E_Detect_Capital.detectCapitalUse2("FlaG"));
     }
 }
