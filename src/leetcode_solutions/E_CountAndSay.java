@@ -38,7 +38,7 @@ package leetcode_solutions;
 
 public class E_CountAndSay {
     public static String countAndSay(int n) {
-        String str = new String("1");
+        String str = "1";
         StringBuilder op_string = new StringBuilder(str);
         for(int i = 2 ; i <= n ; i++){
             String temp = op_string.toString();
