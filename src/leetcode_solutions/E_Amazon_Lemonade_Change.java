@@ -68,11 +68,11 @@ public class E_Amazon_Lemonade_Change {
             }else{
                 if(change_map.get(10)>=1 && change_map.get(5)>=1){
                     change_map.put(5,change_map.get(5)-1);
-                    change_map.put(5,change_map.get(10)-1);
-                    change_map.put(5,change_map.get(20)+1);
+                    change_map.put(10,change_map.get(10)-1);
+                    change_map.put(20,change_map.get(20)+1);
                 }else if(change_map.get(5)>=3){
                     change_map.put(5,change_map.get(5)-3);
-                    change_map.put(5,change_map.get(20)+1);
+                    change_map.put(20,change_map.get(20)+1);
                 }else{
                     return false;
                 }
@@ -83,8 +83,9 @@ public class E_Amazon_Lemonade_Change {
 
     public static void main(String[] args) {
         System.out.println("860. Lemonade Change");
-        System.out.println(lemonadeChange(new int[]{5,5,5,10,20}));
-        System.out.println(lemonadeChange(new int[]{5,5,5,10,5}));
-        System.out.println(lemonadeChange(new int[]{5,5,10,10,20}));
+//        System.out.println(lemonadeChange(new int[]{5,5,5,10,20}));
+//        System.out.println(lemonadeChange(new int[]{5,5,5,10,5}));
+//        System.out.println(lemonadeChange(new int[]{5,5,10,10,20}));
+        System.out.println(lemonadeChange(new int[]{5,5,5,10,5,5,10,20,20,20}));
     }
 }
