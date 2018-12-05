@@ -1,4 +1,3 @@
-import com.sun.deploy.util.ArrayUtil;
 
 public class test2 {
     public static void main(String argds[]){

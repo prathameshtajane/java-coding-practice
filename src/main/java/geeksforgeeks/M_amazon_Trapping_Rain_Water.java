@@ -49,6 +49,31 @@ package geeksforgeeks;
     Then use these pre-computed values to find the amount of water in every array element.
  */
 
-//todo : Trapping_Rain_Water Problem
-public class Trapping_Rain_Water {
+//todo : M_amazon_Trapping_Rain_Water Problem
+public class M_amazon_Trapping_Rain_Water {
+
+    public int getTrappedWater(int[] input_arr){
+        int trapped_water = 0;
+        int[] left = new int[input_arr.length];
+        int[] right = new int[input_arr.length];
+
+        //fill left array
+        left[0]=input_arr[0];
+        for(int i = 1; i < input_arr.length ; i++){
+            left[i]=Math.max(left[i-1],input_arr[i]);
+        }
+
+        //fill right array
+        right[input_arr.length-1]=input_arr[input_arr.length-1];
+        for(int i = input_arr.length-2 ; i >= 0 ; i--){
+            right[i]=Math.max(right[i+1],input_arr[i]);
+        }
+
+        for(int i = 0 ; i < input_arr.length ; i++){
+            trapped_water += Math.min(left[i],right[i])-input_arr[i];
+        }
+
+        return trapped_water;
+    }
+
 }

@@ -36,10 +36,10 @@ public class E_ReverseString3 {
 
 
     private static String reveserSentence(String str){
-        return Arrays.asList(str.split(" "))
-                .stream()
-                .map(x -> reverseWordJava8(x))
-                .collect(Collectors.joining(" "));
+            return Arrays.asList(str.split(" "))
+                    .stream()
+                    .map(x -> reverseWordJava8(x))
+                    .collect(Collectors.joining(" "));
     }
 
     private static void reverseWord(StringBuffer input_string,int start_index,int end_index){

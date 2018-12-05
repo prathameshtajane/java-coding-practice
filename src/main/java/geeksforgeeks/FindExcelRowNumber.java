@@ -18,7 +18,7 @@ public class FindExcelRowNumber {
 
         //edge case
         if(input_decimal_number <= 0){
-            System.err.println("Wrong input ");
+            System.err.println("Wrong input");
         }
 
         StringBuffer excel_row = new StringBuffer();
@@ -36,8 +36,9 @@ public class FindExcelRowNumber {
 
     public static void main(String[] args) {
         System.out.println("Find Excel Row number given decimal number");
-        findExcelRowNumber(701);
+        findExcelRowNumber(703);
         findExcelRowNumber(28);
-        findExcelRowNumber(28);
+        findExcelRowNumber(27);
+        findExcelRowNumber(26);
     }
 }

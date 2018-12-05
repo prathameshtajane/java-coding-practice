@@ -46,7 +46,7 @@ public class M_Spiral_Matrix {
         int start_col = 0;
         int end_col = input_matrix[0].length-1;
 
-        while(start_row <= end_row && start_col < end_col){
+        while(start_row <= end_row && start_col <= end_col){
             // iterate from left to right
             for(int col = start_col ; col <= end_col ; col++)
                 spiral_traversal_accum_list.add(input_matrix[start_row][col]);

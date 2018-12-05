@@ -11,7 +11,7 @@ package leetcode_solutions;
  *  Iterative Method
 
     1.  Initialize three pointers prev as NULL, curr as head and next as NULL.
-    2.  Iterate trough the linked list. In loop, do following.
+    2.  Iterate through the linked list. In loop, do following.
         // Before changing next of current,
         // store next node
         next = curr->next
