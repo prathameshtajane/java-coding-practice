@@ -31,4 +31,12 @@ class M_amazon_Trapping_Rain_WaterTest {
         assertEquals(2,trapped_water.getTrappedWater(locations));
     }
 
+    @Test
+    @DisplayName("default edge test case 3")
+    void getTrappedWater4() {
+        int[] locations = {2, 0};
+        M_amazon_Trapping_Rain_Water trapped_water = new M_amazon_Trapping_Rain_Water();
+        assertEquals(0,trapped_water.getTrappedWater(locations));
+    }
+
 }
