@@ -20,7 +20,6 @@ class M_Amazon_Binary_Tree_Vertical_Order_TraversalTest {
         root.right=new TreeNode(20);
         root.right.left=new TreeNode(15);
         root.right.right=new TreeNode(7);
-//        int[] expected_output = {9,3,15,20,7};
         List<Integer> expected_output_list = Arrays.asList(9,3,15,20,7);
         List<Integer> calculated_output_list = vtravesal.verticalOrder(root).stream().flatMap(Collection::stream).collect(Collectors.toList());
         Assert.assertEquals(expected_output_list,calculated_output_list);

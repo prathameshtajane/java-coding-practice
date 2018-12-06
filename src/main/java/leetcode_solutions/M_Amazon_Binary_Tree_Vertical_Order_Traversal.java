@@ -139,13 +139,4 @@ public class M_Amazon_Binary_Tree_Vertical_Order_Traversal {
 
         return res;
     }
-
-    public static void main(String[] args) {
-//        TreeNode root = new TreeNode(3);
-//        root.left = new TreeNode(9);
-//        root.right=new TreeNode(20);
-//        root.right.left=new TreeNode(15);
-//        root.right.right=new TreeNode(7);
-//        verticalOrder(root);
-    }
 }
