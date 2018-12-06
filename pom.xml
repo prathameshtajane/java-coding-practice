@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>solutions.algorithms</groupId>
-    <artifactId>javaCodingChallenges23</artifactId>
+    <artifactId>javaCodingChallenges</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
