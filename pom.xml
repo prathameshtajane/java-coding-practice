@@ -100,11 +100,6 @@
             <version>${junit.platform.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.jacoco</groupId>-->
-            <!--<artifactId>jacoco-maven-plugin</artifactId>-->
-            <!--<version>0.8.2</version>-->
-        <!--</dependency>-->
     </dependencies>
 
 </project>
