@@ -32,4 +32,22 @@ class H_Amazon_First_Missing_PositiveTest {
         H_Amazon_First_Missing_Positive testObj = new H_Amazon_First_Missing_Positive();
         Assert.assertEquals(expected_output,testObj.firstMissingPositive(input));
     }
+
+    @Test
+    @Tag("default test case 4")
+    void firstMissingPositive4() {
+        int[] input = {};
+        int expected_output = 1;
+        H_Amazon_First_Missing_Positive testObj = new H_Amazon_First_Missing_Positive();
+        Assert.assertEquals(expected_output,testObj.firstMissingPositive(input));
+    }
+
+    @Test
+    @Tag("default test case 5")
+    void firstMissingPositive5() {
+        int[] input = {1};
+        int expected_output = 2;
+        H_Amazon_First_Missing_Positive testObj = new H_Amazon_First_Missing_Positive();
+        Assert.assertEquals(expected_output,testObj.firstMissingPositive(input));
+    }
 }

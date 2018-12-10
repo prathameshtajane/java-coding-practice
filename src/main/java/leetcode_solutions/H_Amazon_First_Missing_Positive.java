@@ -41,6 +41,11 @@ public class H_Amazon_First_Missing_Positive {
     }
 
     public int firstMissingPositive(int[] nums) {
+
+        if(nums.length == 0){
+            return 1;
+        }
+
         for(int i = 0 ; i < nums.length ; i++){
             while(nums[i] > 0 && nums[i] <= nums.length && nums[nums[i]-1] != nums[i]){
                 swap(i,nums[i]-1,nums);
@@ -52,6 +57,7 @@ public class H_Amazon_First_Missing_Positive {
                 return (i+1);
             }
         }
-        return -1;
+
+        return nums.length+1;
     }
 }
