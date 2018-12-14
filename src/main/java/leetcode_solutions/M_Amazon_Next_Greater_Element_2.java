@@ -1,5 +1,7 @@
 package leetcode_solutions;
 
+import java.util.Arrays;
+
 /**
  *  503. Next Greater Element II
  *
@@ -23,7 +25,26 @@ package leetcode_solutions;
 public class M_Amazon_Next_Greater_Element_2 {
     public int[] nextGreaterElements(int[] nums) {
         int[] op_array = new int[nums.length];
-
+        int[] newNums = new int[nums.length*2];
+        for(int i = 0 ; i < newNums.length ; i++){
+            newNums[i]=nums[i%nums.length];
+        }
+        for(int i = 0 ; i < nums.length ; i++){
+            for(int j = i+1 ; j < (newNums.length) ; j++){
+                if(newNums[j]>newNums[i]){
+                    op_array[i]=newNums[j];
+                    break;
+                }else {
+                    op_array[i]=-1;
+                }
+            }
+        }
         return op_array;
+    }
+
+    public static void main(String[] args) {
+        M_Amazon_Next_Greater_Element_2 testObj = new M_Amazon_Next_Greater_Element_2();
+        int[] input = {1,2,1};
+        System.out.println(Arrays.toString(testObj.nextGreaterElements(input)));
     }
 }
