@@ -33,6 +33,21 @@ public class FirstUniqueCharacterInAString {
         return returnIndex;
     }
 
+    public int firstUniqCharOptimal(String s){
+        int[] charCountArray = new int[256];
+        for(char character : s.toCharArray()){
+            ++charCountArray[(int)Character.toLowerCase(character)];
+        }
+
+        for(int i = 0 ; i < s.toCharArray().length ; i++){
+            if(charCountArray[(int)Character.toLowerCase(s.charAt(i))]==1){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
 
     public static void main(String args[]){
         System.out.println("FirstUniqueCharacterInAString");
