@@ -17,9 +17,9 @@ package leetcode_solutions;
  * Definition for singly-linked list.
  **/
 
-public class addTwoNumbers {
+public class E_Amazon_addTwoNumbers {
 
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next = null;
         ListNode(int x) { val = x; }
@@ -79,5 +79,32 @@ public class addTwoNumbers {
             addNodeInOutputLinkedList(l2.val);
         }
         return outputLinkedListFirst.next;
+    }
+
+    public ListNode addTwoNumbersOptimal(ListNode l1, ListNode l2){
+        ListNode sentinel = new ListNode(0);
+        ListNode d = sentinel;
+        int sum = 0;
+        while(l1 != null || l2 != null){
+            sum=sum/10;
+
+            if(l1 != null){
+                sum = sum + l1.val;
+                l1=l1.next;
+            }
+
+            if(l2 != null){
+                sum = sum + l2.val;
+                l2=l2.next;
+            }
+
+            d.next = new ListNode(sum % 10);
+            d=d.next;
+        }//end of while loop
+        if(sum % 10 == 1){
+            d.next = new ListNode(sum % 10);
+            d=d.next;
+        }
+        return sentinel.next;
     }
 }
