@@ -1,15 +1,6 @@
 package ctci.LinkedLists;
 
 
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-        this.data=data;
-        this.next=null;
-    }
-}
-
 public class ReturnKthToLast {
 
     int getKthToLast(Node head, int k){
