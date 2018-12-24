@@ -2,6 +2,11 @@ package ctci.LinkedLists;
 
 public class GetMiddleOfLinkedList {
     int getMiddleNodeOfLinkedList(Node head){
+        //edge case
+        if(head == null){
+            return -1;
+        }
+
         Node slowPointer = head;
         Node fastPointer = head;
 
