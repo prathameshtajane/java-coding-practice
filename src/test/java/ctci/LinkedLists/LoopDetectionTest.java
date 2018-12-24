@@ -56,4 +56,11 @@ class LoopDetectionTest {
         Node expectedLoopStartNode = root.next;
         Assert.assertEquals(expectedLoopStartNode,testObj.getLoopStartNode(root));
     }
+
+    @Test
+    void getLoopStartNodeTest4(){
+        LoopDetection testObj = new LoopDetection();
+        Node root = new Node(1);
+        Assert.assertNull(testObj.getLoopStartNode(root));
+    }
 }
