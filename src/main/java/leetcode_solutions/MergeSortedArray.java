@@ -15,9 +15,25 @@ package leetcode_solutions;
 
      Output: [1,2,2,3,5,6]
 
-    LeetCode Link : https://leetcode.com/problems/merge-sorted-array/description/R
+    LeetCode Link : https://leetcode.com/problems/merge-sorted-array/description/
  */
 public class MergeSortedArray {
+
+    public void optimalMerge(int[] nums1, int m, int[] nums2, int n){
+        int i = m-1;
+        int j = n-1;
+        int k = m+n-1;
+        while(i >= 0 && j >= 0){
+            if(nums1[i] > nums2[j]){
+                nums1[k--]=nums1[i--];
+            }else{
+                nums1[k--]=nums2[j--];
+            }
+        }
+        while (j >= 0){
+            nums1[k--]=nums2[j--];
+        }
+    }
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
@@ -44,14 +60,15 @@ public class MergeSortedArray {
         }
     }
 
-    public static void main(String args[]){
-        System.out.println("START : Merge Sorted Array");
-        int[] nums1 = {1};
-        int[] nums2 = {};
-        int m = 1;
-        int n = 0;
-        MergeSortedArray MS = new MergeSortedArray();
-        MS.merge(nums1,m,nums2,n);
-        System.out.println("END : Merge Sorted Array");
-    }
+//    public static void main(String args[]){
+//        System.out.println("START : Merge Sorted Array");
+//        int[] nums1 = {1};
+//        int[] nums2 = {};
+//        int m = 1;
+//        int n = 0;
+//        MergeSortedArray MS = new MergeSortedArray();
+//        MS.merge(nums1,m,nums2,n);
+//        MS.optimalMerge(nums1,m,nums2,n);
+//        System.out.println("END : Merge Sorted Array");
+//    }
 }
