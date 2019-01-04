@@ -26,7 +26,41 @@ public class CreateBSTGivenUnsortedArray {
         }
     }
 
+    static TreeNode addIntoBinarySearchTreeIterative(TreeNode root , int num){
+        if(root == null){
+            return root;
+        }
+        TreeNode newNode = new TreeNode(num);
+        TreeNode parentNode = null;
+        TreeNode currentNode = root;
+
+        while (currentNode != null){
+            parentNode=currentNode;
+            if(currentNode.val >= newNode.val){
+                currentNode=currentNode.left;
+            }else{
+                currentNode=currentNode.right;
+            }
+        }
+
+        if(parentNode.val >= newNode.val){
+            parentNode.left=newNode;
+        }else{
+            parentNode.right=newNode;
+        }
+        return root;
+    }
+
+
     private static TreeNode createBinarySearchTree(int[] unsorted_tree){
+        TreeNode root = new TreeNode(unsorted_tree[0]);
+        for(int i = 1 ; i<unsorted_tree.length ; i++){
+            addIntoBinarySearchTreeIterative(root,unsorted_tree[i]);
+        }
+        return root;
+    }
+
+    private static TreeNode createBinarySearchTreeIteratively(int[] unsorted_tree){
         TreeNode root = new TreeNode(unsorted_tree[0]);
         for(int i = 1 ; i<unsorted_tree.length ; i++){
             addIntoBinarySearchTree(root,unsorted_tree[i]);
@@ -37,6 +71,8 @@ public class CreateBSTGivenUnsortedArray {
 
     public static void main(String[] args) {
         System.out.println("Create a Binary Search Tree given unsorted array");
-        createBinarySearchTree(new int[]{8,7,9,10,5,6,3});
+        System.out.println(createBinarySearchTreeIteratively(new int[]{8,7,9,10,5,6,3}).val);
+        System.out.println(createBinarySearchTree(new int[]{8,7,9,10,5,6,3}).val);
+
     }
 }
