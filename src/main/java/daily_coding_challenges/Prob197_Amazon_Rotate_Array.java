@@ -8,7 +8,6 @@ import java.util.Arrays;
  * Given an array and a number k that's smaller than the length of the array,
  * rotate the array to the right k elements in-place.
  */
-//todo:Prob197_Amazon_Rotate_Array
 public class Prob197_Amazon_Rotate_Array {
     static void reverseArray (int[] nums , int startIndex , int endIndex){
         while(startIndex < endIndex){
